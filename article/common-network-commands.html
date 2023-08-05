@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Common Network Commands - CyberMITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CyberMITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Common Network Commands</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690486639284"
+                  >2023-07-27 12:37</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690487961579"
+                  >2023-07-27 12:59</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="common-network-commands">Common Network Commands</h1>
+<p><code>ip a</code>:</p>
+<p>Explanation: Displays the network interfaces and their associated IP addresses.<br />
+Example: Running ip a would show information about network interfaces, including their IP addresses, MAC addresses, and other details.<br />
+<img src="/_resources/2edf354586c7476490f64b523e68e789.png" /></p>
+<hr />
+<p><code>ifconfig</code>:</p>
+<p>Explanation: Displays the configuration and status of network interfaces.<br />
+Example: Running <code>ifconfig</code> would show the configuration details, including IP addresses, MAC addresses, and other information for active network interfaces.<br />
+<img src="/_resources/a1d9ea983ec841629b59ff51703ea458.png" /></p>
+<hr />
+<p><code>iwconfig</code>:</p>
+<p>Explanation: Displays the configuration and status of wireless network interfaces.<br />
+Example: Running <code>iwconfig</code> would show the configuration details, such as wireless signal strength, frequency, and encryption information, for active wireless interfaces.<br />
+<img src="/_resources/9bc3657f9e8a43b3917dc1a1e885327c.png" /></p>
+<hr />
+<p><code>ip n</code>:</p>
+<p>Explanation: Displays the Neighbor Table, which contains the IP-to-MAC address mappings for devices in the local network.<br />
+Example: Running <code>ip n</code> would show the IP and MAC addresses of devices that have recently communicated with the current device.<br />
+<img src="/_resources/9ec6190b24b147d794dec4c4387d8e69.png" /></p>
+<hr />
+<p><code>arp -a</code>:</p>
+<p>Explanation: Displays the ARP (Address Resolution Protocol) cache, which maps IP addresses to MAC addresses.<br />
+Example: Running <code>arp -a</code> would show the IP and MAC addresses of devices that have been resolved recently by the ARP protocol.<br />
+<img src="/_resources/fe8f6bc54da340e5b68c4385a4690310.png" /></p>
+<hr />
+<p><code>ip r</code>:</p>
+<p>Explanation: Displays the routing table, which contains information about network routes.<br />
+Example: Running <code>ip r</code> would show the routing table, including destination networks, gateway IP addresses, and network interfaces.<br />
+<img src="/_resources/b8c0403c8924471080fdcb627c8fb476.png" /></p>
+<hr />
+<p><code>route</code>:</p>
+<p>Explanation: Displays or manipulates the IP routing table.<br />
+Example: Running <code>route</code> would display the routing table, similar to the ip r command.<br />
+<img src="/_resources/ae9d46ddadbf4ad484feb277deaef590.png" /></p>
+<hr />
+<p><code>ping</code>:</p>
+<p>Explanation: Sends ICMP echo requests to a specified IP address to check network connectivity and measure round-trip time.</p>
+<p>Example: Running <code>ping 8.8.8.8</code> would send ICMP echo requests to the IP address "8.8.8.8" (Google's DNS server) and display the round-trip time and packet loss statistics.<br />
+These commands are commonly used for network troubleshooting, configuration, and gathering network-related information in Linux systems.</p>
+<p><img src="/_resources/3f64eaec16e9474381cb757079ead2da.png" /><br />
+<em>There are machines that could have ICMP disabled</em></p>
+<hr />
+</div>
+      </article>
+    </div>
+  </body>
+</html>

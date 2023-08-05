@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Subnetting Notes w/ links - CyberMITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CyberMITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Subnetting Notes w/ links</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690476071875"
+                  >2023-07-27 09:41</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690483812939"
+                  >2023-07-27 11:50</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="subnetting-part-1">Subnetting Part 1</h1>
+<p>Seven Second Subnetting: <a title="https://www.youtube.com/watch?v=ZxAwQB8TZsM" href="https://www.youtube.com/watch?v=ZxAwQB8TZsM">https://www.youtube.com/watch?v=ZxAwQB8TZsM</a></p>
+<hr />
+<p><a title="https://www.ipaddressguide.com/cidr" href="https://www.ipaddressguide.com/cidr">https://www.ipaddressguide.com/cidr</a></p>
+<hr />
+<p>Subnet Guide: <a title="https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view" href="https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view">https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view</a><br />
+<img src="/_resources/41af432b2b474fa2bc59c04294e82e14.png" /></p>
+<hr />
+<p><em><strong>This is what subnetting looks like</strong></em><br />
+<img src="/_resources/a0ac22707a194c6aa3f94c5d65f507b7.png" /></p>
+<hr />
+<p>Subnetting is the process of dividing a network into smaller subnetworks called subnets. It allows for more efficient use of IP addresses and facilitates network management and routing. Subnetting is commonly used in IPv4 networks.</p>
+<p>Subnetting involves borrowing bits from the host portion of an IP address to create a subnet identifier. By doing this, a network can be divided into multiple subnets, each with its own range of IP addresses.</p>
+<p>CIDR (Classless Inter-Domain Routing) notation is a method used to represent IP addresses and their corresponding subnet masks. It specifies the network prefix length, which indicates the number of bits used for the network portion of the IP address. CIDR notation is expressed by appending a forward slash (/) followed by the prefix length to the IP address.</p>
+<p>Here's an example to illustrate subnetting and CIDR notation:</p>
+<p>Consider an IP address: 192.168.0.0/24</p>
+<p>In this example, the IP address is in the format of "192.168.0.0" and the "/24" represents the prefix length, indicating that the first 24 bits represent the network portion of the IP address, while the remaining 8 bits represent the host portion.</p>
+<p>With a /24 prefix length, the subnet mask for this network would be 255.255.255.0. This means that the first three octets are reserved for the network, and the last octet can be used for addressing hosts within the subnet.</p>
+<p>To subnet this network further, additional bits can be borrowed from the host portion. For instance, if we borrow 2 bits, we can create 4 subnets. The subnet mask would become 255.255.255.192 (in binary: 11111111.11111111.11111111.11000000).</p>
+<p>The four resulting subnets would be:</p>
+<p>Subnet 1: 192.168.0.0/26 (network range: 192.168.0.0 - 192.168.0.63)<br />
+Subnet 2: 192.168.0.64/26 (network range: 192.168.0.64 - 192.168.0.127)<br />
+Subnet 3: 192.168.0.128/26 (network range: 192.168.0.128 - 192.168.0.191)<br />
+Subnet 4: 192.168.0.192/26 (network range: 192.168.0.192 - 192.168.0.255)<br />
+Each subnet can then be assigned to a different segment or used for different purposes within the network.</p>
+<p>CIDR notation provides a concise way to represent networks and subnets by specifying the prefix length. It allows for flexibility in defining network boundaries and enables efficient address allocation in IP networking.</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>

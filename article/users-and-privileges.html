@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Users and Privileges - CyberMITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CyberMITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Users and Privileges</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690484124224"
+                  >2023-07-27 11:55</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690486408171"
+                  >2023-07-27 12:33</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="users-and-privileges">Users and Privileges</h1>
+<p>In the <code>ls -la</code> output, the "rwx" refers to the permissions associated with a file or directory. The permissions are displayed for three different entities: the owner, the group, and other users. Each entity has three permission categories: read (r), write (w), and execute (x). Here's a breakdown of what each permission category represents:</p>
+<ul>
+<li>
+<p><strong>Read (r)</strong>: Allows the entity to read or view the contents of a file or the names of files within a directory.</p>
+</li>
+<li>
+<p><strong>Write (w)</strong>: Enables the entity to modify or write to a file or add, delete, or rename files within a directory.</p>
+</li>
+<li>
+<p><strong>Execute (x)</strong>: Grants the entity the permission to execute a file or enter a directory. For directories, execute permission is required to access its contents.</p>
+</li>
+</ul>
+<hr />
+<p>In the <code>ls -la</code> output, the permissions are displayed as a series of nine characters. The first character represents the file type (e.g., - for a regular file, d for a directory). The next three characters represent the owner's permissions, followed by the group's permissions, and then the permissions for other users.</p>
+<p>For example, let's consider an <code>ls -la</code> output line:</p>
+<p><code>-rwxr-x--- 1 user group 4096 May 10 12:34 myfile.txt </code></p>
+<p>In this example, the permissions are broken down as follows:</p>
+<p>-<code>-rwxr-x---</code>: The first character indicates that it is a regular file. The following three characters (<code>rwx</code>) represent the owner's permissions (read, write, and execute). The next three characters (<code>r-x</code>) represent the group's permissions (read and execute). The last three characters (<code>---</code>) represent the permissions for other users (no permissions).</p>
+<ul>
+<li><code>1</code>: Indicates the number of hard links to the file.</li>
+<li><code>user</code>: Refers to the owner of the file.</li>
+<li><code>group</code>: Refers to the group assigned to the file.</li>
+<li><code>4096</code>: Indicates the file size in bytes.</li>
+<li><code>May 10 12:34</code>: Specifies the date and time of the last modification.</li>
+<li><code>myfile.txt</code>: Represents the name of the file.</li>
+</ul>
+<p><img src="/_resources/0da26479702946579e85cb3fb926116d.png" /><br />
+It's worth noting that if a permission is not granted for a particular entity, a hyphen (-) is displayed in its place. Additionally, the output can include additional information such as special permissions, ownership, and timestamps.</p>
+<hr />
+<p>Here are explanations and examples of the commands mentioned in this video. Please note, Teachable blocks the mention of some of the sensitive paths shown in the video, so we cannot display them in text format here:</p>
+<p><code>chmod</code> (Change Mode):</p>
+<p>Explanation: Changes the permissions of a file or directory.<br />
+Example: Running chmod +x script.sh would add the execute permission to the file "script.sh", allowing it to be executed as a script.<br />
+<img src="/_resources/7655e01184874c04b16e63cb2bda0b4c.png" /></p>
+<h2 id="chmod-777"><code>chmod 777</code></h2>
+<p><img src="/_resources/d901c799e8d445259ddc7ea308a0b34d.png" /><br />
+<img src="/_resources/dc7145fb7cb84982aeb9f3d8b3d18d53.png" /></p>
+<hr />
+<p><code>adduser</code>:</p>
+<p>Explanation: Creates a new user account.<br />
+Example: Running adduser john would create a new user account with the username "john" and prompt for additional user information.</p>
+<p><code>su</code> (Switch User):</p>
+<p>Explanation: Allows a user to switch to another user account.<br />
+Example: Running su jane would switch to the user account "jane" after entering the password for that account.</p>
+<p><img src="/_resources/4b36ca48772443698eec8fe46bad2a8f.png" /></p>
+<hr />
+<p><code>sudo cat /etc/shadow</code></p>
+<p><img src="/_resources/9fafc3bd8eba46fb9c015a05cee59ff0.png" /></p>
+<p><strong>password hashes for users</strong></p>
+<p><img src="/_resources/568189f71bf942209ba0d6b89d23b153.png" /></p>
+<p><code>sudo cat /etc/sudoers</code></p>
+<p><img src="/_resources/b96153df4be44119a31042d5a2f9711a.png" /></p>
+<p><code>grep 'sudo' /etc/group</code></p>
+<p><img src="/_resources/ba4160b76d0c4dba85cf6252083a977e.png" /></p>
+<hr />
+<p><code>/etc/sudoers</code>:</p>
+<p>Explanation: Displays the content of the "/etc/sudoers" file, which contains configuration information for the sudo command.<br />
+Example: Running /etc/sudoers would display the configuration directives for sudo access and permissions.</p>
+<p><code>sudo -l</code>:</p>
+<p>Explanation: Lists the commands a user is allowed to run with sudo privileges.<br />
+Example: Running sudo -l would display the commands and permissions available to the current user with sudo access.</p>
+<hr />
+<p>Please note that some of these commands require administrative privileges, and caution should be exercised when modifying system files or working with user accounts.</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>

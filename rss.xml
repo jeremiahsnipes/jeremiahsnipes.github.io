@@ -4,7 +4,7 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 05 Aug 2023 17:35:06 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 05 Aug 2023 17:41:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
@@ -46,6 +46,315 @@ fi</p>
 <hr />
 <p>Resolution: Ensure use of backtick (`) instead of using single quote ('). Alternatively, use $(seq 1 254) instead of seq</p>
 <hr />
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Installing and Updating Tools]]></title>
+            <guid>6449c8145c2d456bb2c84e8cbe12864e</guid>
+            <pubDate>Fri, 28 Jul 2023 05:49:52 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="installing-and-updating-tools">Installing and Updating Tools</h1>
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code>:</p>
+<p>Explanation: Updates the package lists and upgrades installed packages on a Debian-based Linux system using the APT package manager.</p>
+<p>Example: Running <code>sudo apt update &amp;&amp; sudo apt upgrade</code> would update the package lists to retrieve information about available updates, and then upgrade the installed packages to their latest versions.</p>
+<p><code>sudo apt install cron-daemon-common</code>:</p>
+<p>Explanation: Installs the "cron-daemon-common" package using APT. Cron is a time-based job scheduler in Linux systems, and the "cron-daemon-common" package provides common files and utilities for the cron daemon.</p>
+<p>Example: Running <code>sudo apt install cron-daemon-common</code> would download and install the "cron-daemon-common" package on the system.</p>
+<p><code>sudo git clone https://github.com/Dewalt-arch/pimpmykali.git</code>:</p>
+<p>Explanation: Clones a Git repository from the specified URL using the Git version control system.</p>
+<p>Example: Running <code>sudo git clone https://github.com/Dewalt-arch/pimpmykali.git</code> would clone the repository from the given URL and create a local copy of the repository's files and version history.</p>
+<p><a title="https://github.com/Dewalt-arch/pimpmykali" href="https://github.com/Dewalt-arch/pimpmykali">https://github.com/Dewalt-arch/pimpmykali</a></p>
+<p><img src="/_resources/63495ed0efc54799bb9c90b4cb618413.png" /><br />
+<img src="/_resources/5dea13301ee1476f9fbea4789e2fca94.png" /><br />
+<img src="/_resources/143fe54c9ce240f682f839b57285254d.png" /></p>
+<hr />
+<p>These commands are commonly used in Linux systems for updating packages, installing new software, and managing version-controlled repositories. The sudo command is used to execute commands with superuser privileges. The apt command is used for package management in Debian-based distributions. The git command is used for version control and working with Git repositories.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Starting and Stopping Services]]></title>
+            <guid>4f08130515014771ad09e5ce594f0e77</guid>
+            <pubDate>Fri, 28 Jul 2023 05:30:46 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="starting-and-stopping-services">Starting and Stopping Services</h1>
+<p><code>sudo service apache2 start</code>:</p>
+<p>Explanation: Starts the Apache web server service.<br />
+Example: Running <code>sudo service apache2 start</code> would initiate the Apache web server and make it available for serving web pages.<br />
+<img src="/_resources/9cb27b43ea4c4b34af3f0ab5ca30f3fe.png" /><br />
+*<strong>needs to be on port 80</strong></p>
+<p><code>sudo service apache2 stop</code>:</p>
+<p>Explanation: Stops the Apache web server service.<br />
+Example: Running <code>sudo service apache2 stop</code> would halt the running Apache web server, shutting down any active web page serving.</p>
+<hr />
+<p><code>python3 -m http.server 80</code>:</p>
+<p>Explanation: Starts a simple HTTP server using Python on port 80.<br />
+Example: Running <code>python3 -m http.server 80</code> would start a basic HTTP server on port 80, allowing you to serve files from the current directory.<br />
+<img src="/_resources/1d0fa2cfa4a945b9b73e31104099ce08.png" /><br />
+<img src="/_resources/c86aa7073a964038900f908d568e1dcd.png" /></p>
+<hr />
+<p><code>sudo systemctl enable ssh</code>:</p>
+<p>Explanation: Enables the SSH (Secure Shell) service to start automatically on system boot.<br />
+Example: Running <code>sudo systemctl enable ssh</code> would configure the system to start the SSH service during system startup.</p>
+<p><code>sudo systemctl disable ssh</code>:</p>
+<p>Explanation: Disables the SSH service from starting automatically on system boot.<br />
+Example: Running <code>sudo systemctl disable ssh</code> would prevent the SSH service from starting automatically during system startup.</p>
+<hr />
+<p>These commands are frequently used in Linux systems for managing services, starting and stopping processes, and enabling or disabling specific services at system startup. The <code>sudo</code> command is used to execute commands with superuser privileges. The <code>service</code> and <code>systemctl</code> commands are used to manage system services.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Viewing, Creating, and Editing Files]]></title>
+            <guid>37f4c5ff50084570bc3ba9a62089fb18</guid>
+            <pubDate>Thu, 27 Jul 2023 20:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</h1>
+<p><code>echo "hello" &gt; hey.txt</code>:</p>
+<p>Explanation: Creates a new file named "hey.txt" with the content "hello" and overwrites the file if it already exists.<br />
+Example: Running <code>echo "hello" &gt; hey.txt</code>would create a file named "hey.txt" and write the word "hello" into it.</p>
+<p><code>echo "hello again" &gt;&gt; hey.txt</code>:</p>
+<p>Explanation: Appends the content "hello again" to an existing file named "hey.txt" or creates a new file if it doesn't exist.<br />
+Example: Running <code>echo "hello again" &gt;&gt; hey.txt</code> would append the text "hello again" to the end of the "hey.txt" file.</p>
+<p><code>touch newfile.txt</code>:</p>
+<p>Explanation: Creates a new empty file named "newfile.txt" or updates the timestamp of an existing file to the current time.<br />
+Example: Running <code>touch newfile.txt</code> would create an empty file named "newfile.txt" if it doesn't exist or update its timestamp if it already exists.</p>
+<p><code>nano newfile.txt</code>:</p>
+<p>Explanation: Opens the text editor Nano and allows you to create or edit the content of a file named "newfile.txt".<br />
+Example: Running <code>nano newfile.txt</code> would open the Nano editor, where you can enter or modify text in the "newfile.txt" file.</p>
+<p><code>mousepad newfile.txt</code>:</p>
+<p>Explanation: Opens the Mousepad text editor and allows you to create or edit the content of a file named "newfile.txt".<br />
+Example: Running <code>mousepad newfile.txt</code> would open the Mousepad editor, where you can enter or modify text in the "newfile.txt" file.</p>
+<hr />
+<p>These commands are commonly used for file manipulation and editing in Linux systems. The echo command is used to print text or variables to the terminal or redirect them to files. The touch command is used to create or update file timestamps. The nano and mousepad commands are text editors that allow you to create and modify files directly from the terminal.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Common Network Commands]]></title>
+            <guid>5ac44562fd65487f83c73bae58a4ce5c</guid>
+            <pubDate>Thu, 27 Jul 2023 19:37:19 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="common-network-commands">Common Network Commands</h1>
+<p><code>ip a</code>:</p>
+<p>Explanation: Displays the network interfaces and their associated IP addresses.<br />
+Example: Running ip a would show information about network interfaces, including their IP addresses, MAC addresses, and other details.<br />
+<img src="/_resources/2edf354586c7476490f64b523e68e789.png" /></p>
+<hr />
+<p><code>ifconfig</code>:</p>
+<p>Explanation: Displays the configuration and status of network interfaces.<br />
+Example: Running <code>ifconfig</code> would show the configuration details, including IP addresses, MAC addresses, and other information for active network interfaces.<br />
+<img src="/_resources/a1d9ea983ec841629b59ff51703ea458.png" /></p>
+<hr />
+<p><code>iwconfig</code>:</p>
+<p>Explanation: Displays the configuration and status of wireless network interfaces.<br />
+Example: Running <code>iwconfig</code> would show the configuration details, such as wireless signal strength, frequency, and encryption information, for active wireless interfaces.<br />
+<img src="/_resources/9bc3657f9e8a43b3917dc1a1e885327c.png" /></p>
+<hr />
+<p><code>ip n</code>:</p>
+<p>Explanation: Displays the Neighbor Table, which contains the IP-to-MAC address mappings for devices in the local network.<br />
+Example: Running <code>ip n</code> would show the IP and MAC addresses of devices that have recently communicated with the current device.<br />
+<img src="/_resources/9ec6190b24b147d794dec4c4387d8e69.png" /></p>
+<hr />
+<p><code>arp -a</code>:</p>
+<p>Explanation: Displays the ARP (Address Resolution Protocol) cache, which maps IP addresses to MAC addresses.<br />
+Example: Running <code>arp -a</code> would show the IP and MAC addresses of devices that have been resolved recently by the ARP protocol.<br />
+<img src="/_resources/fe8f6bc54da340e5b68c4385a4690310.png" /></p>
+<hr />
+<p><code>ip r</code>:</p>
+<p>Explanation: Displays the routing table, which contains information about network routes.<br />
+Example: Running <code>ip r</code> would show the routing table, including destination networks, gateway IP addresses, and network interfaces.<br />
+<img src="/_resources/b8c0403c8924471080fdcb627c8fb476.png" /></p>
+<hr />
+<p><code>route</code>:</p>
+<p>Explanation: Displays or manipulates the IP routing table.<br />
+Example: Running <code>route</code> would display the routing table, similar to the ip r command.<br />
+<img src="/_resources/ae9d46ddadbf4ad484feb277deaef590.png" /></p>
+<hr />
+<p><code>ping</code>:</p>
+<p>Explanation: Sends ICMP echo requests to a specified IP address to check network connectivity and measure round-trip time.</p>
+<p>Example: Running <code>ping 8.8.8.8</code> would send ICMP echo requests to the IP address "8.8.8.8" (Google's DNS server) and display the round-trip time and packet loss statistics.<br />
+These commands are commonly used for network troubleshooting, configuration, and gathering network-related information in Linux systems.</p>
+<p><img src="/_resources/3f64eaec16e9474381cb757079ead2da.png" /><br />
+<em>There are machines that could have ICMP disabled</em></p>
+<hr />
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users and Privileges]]></title>
+            <guid>4b799ed5273645fda4971309444a771b</guid>
+            <pubDate>Thu, 27 Jul 2023 18:55:24 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="users-and-privileges">Users and Privileges</h1>
+<p>In the <code>ls -la</code> output, the "rwx" refers to the permissions associated with a file or directory. The permissions are displayed for three different entities: the owner, the group, and other users. Each entity has three permission categories: read (r), write (w), and execute (x). Here's a breakdown of what each permission category represents:</p>
+<ul>
+<li>
+<p><strong>Read (r)</strong>: Allows the entity to read or view the contents of a file or the names of files within a directory.</p>
+</li>
+<li>
+<p><strong>Write (w)</strong>: Enables the entity to modify or write to a file or add, delete, or rename files within a directory.</p>
+</li>
+<li>
+<p><strong>Execute (x)</strong>: Grants the entity the permission to execute a file or enter a directory. For directories, execute permission is required to access its contents.</p>
+</li>
+</ul>
+<hr />
+<p>In the <code>ls -la</code> output, the permissions are displayed as a series of nine characters. The first character represents the file type (e.g., - for a regular file, d for a directory). The next three characters represent the owner's permissions, followed by the group's permissions, and then the permissions for other users.</p>
+<p>For example, let's consider an <code>ls -la</code> output line:</p>
+<p><code>-rwxr-x--- 1 user group 4096 May 10 12:34 myfile.txt </code></p>
+<p>In this example, the permissions are broken down as follows:</p>
+<p>-<code>-rwxr-x---</code>: The first character indicates that it is a regular file. The following three characters (<code>rwx</code>) represent the owner's permissions (read, write, and execute). The next three characters (<code>r-x</code>) represent the group's permissions (read and execute). The last three characters (<code>---</code>) represent the permissions for other users (no permissions).</p>
+<ul>
+<li><code>1</code>: Indicates the number of hard links to the file.</li>
+<li><code>user</code>: Refers to the owner of the file.</li>
+<li><code>group</code>: Refers to the group assigned to the file.</li>
+<li><code>4096</code>: Indicates the file size in bytes.</li>
+<li><code>May 10 12:34</code>: Specifies the date and time of the last modification.</li>
+<li><code>myfile.txt</code>: Represents the name of the file.</li>
+</ul>
+<p><img src="/_resources/0da26479702946579e85cb3fb926116d.png" /><br />
+It's worth noting that if a permission is not granted for a particular entity, a hyphen (-) is displayed in its place. Additionally, the output can include additional information such as special permissions, ownership, and timestamps.</p>
+<hr />
+<p>Here are explanations and examples of the commands mentioned in this video. Please note, Teachable blocks the mention of some of the sensitive paths shown in the video, so we cannot display them in text format here:</p>
+<p><code>chmod</code> (Change Mode):</p>
+<p>Explanation: Changes the permissions of a file or directory.<br />
+Example: Running chmod +x script.sh would add the execute permission to the file "script.sh", allowing it to be executed as a script.<br />
+<img src="/_resources/7655e01184874c04b16e63cb2bda0b4c.png" /></p>
+<h2 id="chmod-777"><code>chmod 777</code></h2>
+<p><img src="/_resources/d901c799e8d445259ddc7ea308a0b34d.png" /><br />
+<img src="/_resources/dc7145fb7cb84982aeb9f3d8b3d18d53.png" /></p>
+<hr />
+<p><code>adduser</code>:</p>
+<p>Explanation: Creates a new user account.<br />
+Example: Running adduser john would create a new user account with the username "john" and prompt for additional user information.</p>
+<p><code>su</code> (Switch User):</p>
+<p>Explanation: Allows a user to switch to another user account.<br />
+Example: Running su jane would switch to the user account "jane" after entering the password for that account.</p>
+<p><img src="/_resources/4b36ca48772443698eec8fe46bad2a8f.png" /></p>
+<hr />
+<p><code>sudo cat /etc/shadow</code></p>
+<p><img src="/_resources/9fafc3bd8eba46fb9c015a05cee59ff0.png" /></p>
+<p><strong>password hashes for users</strong></p>
+<p><img src="/_resources/568189f71bf942209ba0d6b89d23b153.png" /></p>
+<p><code>sudo cat /etc/sudoers</code></p>
+<p><img src="/_resources/b96153df4be44119a31042d5a2f9711a.png" /></p>
+<p><code>grep 'sudo' /etc/group</code></p>
+<p><img src="/_resources/ba4160b76d0c4dba85cf6252083a977e.png" /></p>
+<hr />
+<p><code>/etc/sudoers</code>:</p>
+<p>Explanation: Displays the content of the "/etc/sudoers" file, which contains configuration information for the sudo command.<br />
+Example: Running /etc/sudoers would display the configuration directives for sudo access and permissions.</p>
+<p><code>sudo -l</code>:</p>
+<p>Explanation: Lists the commands a user is allowed to run with sudo privileges.<br />
+Example: Running sudo -l would display the commands and permissions available to the current user with sudo access.</p>
+<hr />
+<p>Please note that some of these commands require administrative privileges, and caution should be exercised when modifying system files or working with user accounts.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Navigating the File System - Kali Linux]]></title>
+            <guid>1a26d2f1152e4efbb7f5966c1155acb7</guid>
+            <pubDate>Thu, 27 Jul 2023 18:09:54 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="navigating-the-file-system-kali-linux">Navigating the File System - Kali Linux</h1>
+<p><a title="https://explainshell.com/" href="https://explainshell.com/">https://explainshell.com/</a><br />
+<img src="/_resources/052b98a8145a4e359c6bd6edd34ad32f.png" /></p>
+<hr />
+<p><code>pwd</code> (Print Working Directory):</p>
+<p>Explanation: Displays the current working directory.<br />
+Example: Running pwd in the terminal would show the absolute path of the current directory, such as "/home/user/documents".</p>
+<p><code>cd</code> (Change Directory):</p>
+<p>Explanation: Allows you to change the current working directory.<br />
+Example: Running cd /home/user/documents would change the directory to "/home/user/documents".</p>
+<p><code>cd ..</code> (Change to Parent Directory):</p>
+<p>Explanation: Moves up one level in the directory hierarchy.<br />
+Example: Running cd .. in "/home/user/documents" would move to the "/home/user" directory.</p>
+<p><code>ls</code> (List Directory Contents):</p>
+<p>Explanation: Lists the files and directories in the current directory.<br />
+Example: Running ls would display the files and directories in the current directory.</p>
+<p><code>ls -la</code> (List Detailed Directory Contents):</p>
+<p>Explanation: Lists detailed information about files and directories, including hidden files.<br />
+Example: Running ls -la would display a detailed list of files and directories, including hidden files, in the current directory.</p>
+<p><code>mkdir</code> (Make Directory):</p>
+<p>Explanation: Creates a new directory.<br />
+Example: Running mkdir new_folder would create a new directory named "new_folder" in the current directory.</p>
+<p><code>rmdir</code> (Remove Directory):</p>
+<p>Explanation: Removes an empty directory.<br />
+Example: Running rmdir empty_folder would remove the directory named "empty_folder" if it is empty.</p>
+<p><code>man</code> (Manual):</p>
+<p>Explanation: Displays the manual pages for a specified command.<br />
+Example: Running man ls would show the manual pages with detailed information about the ls command.</p>
+<hr />
+<p><code>echo</code></p>
+<p>Explanation: Displays text or variables as output.<br />
+Example: Running echo "Hello, world!" would output "Hello, world!" in the terminal.</p>
+<p><code>&gt;</code> (Output Redirection):</p>
+<p>Explanation: Redirects the output of a command to a file and overwrites the file if it already exists.<br />
+Example: Running echo "Hello" &gt; greeting.txt would write the text "Hello" to a file named "greeting.txt" or overwrite the file if it exists.<br />
+<img src="/_resources/c1f547d82a3c461791311caad5879819.png" /></p>
+<p><code>&gt;&gt;</code> (Append Output):</p>
+<p>Explanation: Redirects the output of a command and appends it to a file.<br />
+Example: Running echo "World!" &gt;&gt; greeting.txt would append the text "World!" to the end of the "greeting.txt" file.</p>
+<p><code>rm</code> (Remove):</p>
+<p>Explanation: Deletes files or directories.<br />
+Example: Running rm file.txt would delete the file named "file.txt" from the current directory.</p>
+<p><code>mv</code> (Move):</p>
+<p>Explanation: Moves or renames files and directories.<br />
+Example: Running mv file.txt new_directory/file_renamed.txt would move the file "file.txt" to the "new_directory" and rename it as "file_renamed.txt".</p>
+<p><code>cp</code> (Copy):</p>
+<p>Explanation: Copies files and directories.<br />
+Example: Running cp file.txt backup/file_copy.txt would create a copy of "file.txt" named "file_copy.txt" in the "backup" directory.</p>
+<p><code>locate</code>:</p>
+<p>Explanation: Searches for files and directories in a prebuilt database.<br />
+Example: Running locate myfile.txt would search for the file named "myfile.txt" in the prebuilt database and display its path if found.</p>
+<p><code>updatedb</code>:</p>
+<p>Explanation: Updates the database used by the locate command to reflect recent changes in the file system.<br />
+Example: Running updatedb would update the database, allowing the locate command to provide up-to-date search results.<br />
+<img src="/_resources/d55c1de7aef548bea79094ac7ab3f703.png" /></p>
+<p><code>passwd</code>:</p>
+<p>Explanation: Allows a user to change their password.<br />
+Example: Running passwd would prompt the user to enter their current password and then set a new password.</p>
+<p>Remember to exercise caution when using commands like rm as they can permanently delete files. It's always a good practice to double-check before executing such commands.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Sudo Overview]]></title>
+            <guid>cac86fb8e1cb4682abb6ec3d9f043c8e</guid>
+            <pubDate>Thu, 27 Jul 2023 18:09:42 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="sudo-overview">Sudo Overview</h2>
+<p><img src="/_resources/3fad4bb0618948d5b90c5661b14a6e0b.png" /><br />
+<code>sudo su -</code></p>
+<hr />
+<p>The <code>sudo</code> command in Linux allows a user with appropriate privileges to execute commands as a superuser or another user. It is commonly used to perform administrative tasks that require elevated privileges. Here's an example of how <code>sudo</code> is used:</p>
+<p>Let's say you want to install a software package using the apt package manager, but it requires administrative privileges. You can use sudo to execute the apt command with elevated privileges. Here's the command:</p>
+<p><code>sudo apt install &lt;package_name&gt;</code></p>
+<p>For instance, if you want to install the package named "nginx" on an Ubuntu system, you can use the following command:</p>
+<p><code>sudo apt install nginx</code></p>
+<p>After running this command, you will be prompted to enter your password. Once you provide the correct password, the command will be executed with superuser privileges, allowing you to install the "nginx" package on the system.</p>
+<p>Please note that the availability and configuration of <code>sudo</code> can vary depending on the Linux distribution and the user's privileges. Additionally, the <code>sudo</code> command can be used for various other administrative tasks, such as editing system files, managing services, and executing critical commands.</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Subnetting Notes w/ links]]></title>
+            <guid>8247634b8478488aab69adf51360100f</guid>
+            <pubDate>Thu, 27 Jul 2023 16:41:11 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="subnetting-part-1">Subnetting Part 1</h1>
+<p>Seven Second Subnetting: <a title="https://www.youtube.com/watch?v=ZxAwQB8TZsM" href="https://www.youtube.com/watch?v=ZxAwQB8TZsM">https://www.youtube.com/watch?v=ZxAwQB8TZsM</a></p>
+<hr />
+<p><a title="https://www.ipaddressguide.com/cidr" href="https://www.ipaddressguide.com/cidr">https://www.ipaddressguide.com/cidr</a></p>
+<hr />
+<p>Subnet Guide: <a title="https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view" href="https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view">https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view</a><br />
+<img src="/_resources/41af432b2b474fa2bc59c04294e82e14.png" /></p>
+<hr />
+<p><em><strong>This is what subnetting looks like</strong></em><br />
+<img src="/_resources/a0ac22707a194c6aa3f94c5d65f507b7.png" /></p>
+<hr />
+<p>Subnetting is the process of dividing a network into smaller subnetworks called subnets. It allows for more efficient use of IP addresses and facilitates network management and routing. Subnetting is commonly used in IPv4 networks.</p>
+<p>Subnetting involves borrowing bits from the host portion of an IP address to create a subnet identifier. By doing this, a network can be divided into multiple subnets, each with its own range of IP addresses.</p>
+<p>CIDR (Classless Inter-Domain Routing) notation is a method used to represent IP addresses and their corresponding subnet masks. It specifies the network prefix length, which indicates the number of bits used for the network portion of the IP address. CIDR notation is expressed by appending a forward slash (/) followed by the prefix length to the IP address.</p>
+<p>Here's an example to illustrate subnetting and CIDR notation:</p>
+<p>Consider an IP address: 192.168.0.0/24</p>
+<p>In this example, the IP address is in the format of "192.168.0.0" and the "/24" represents the prefix length, indicating that the first 24 bits represent the network portion of the IP address, while the remaining 8 bits represent the host portion.</p>
+<p>With a /24 prefix length, the subnet mask for this network would be 255.255.255.0. This means that the first three octets are reserved for the network, and the last octet can be used for addressing hosts within the subnet.</p>
+<p>To subnet this network further, additional bits can be borrowed from the host portion. For instance, if we borrow 2 bits, we can create 4 subnets. The subnet mask would become 255.255.255.192 (in binary: 11111111.11111111.11111111.11000000).</p>
+<p>The four resulting subnets would be:</p>
+<p>Subnet 1: 192.168.0.0/26 (network range: 192.168.0.0 - 192.168.0.63)<br />
+Subnet 2: 192.168.0.64/26 (network range: 192.168.0.64 - 192.168.0.127)<br />
+Subnet 3: 192.168.0.128/26 (network range: 192.168.0.128 - 192.168.0.191)<br />
+Subnet 4: 192.168.0.192/26 (network range: 192.168.0.192 - 192.168.0.255)<br />
+Each subnet can then be assigned to a different segment or used for different purposes within the network.</p>
+<p>CIDR notation provides a concise way to represent networks and subnets by specifying the prefix length. It allows for flexibility in defining network boundaries and enables efficient address allocation in IP networking.</p>
 ]]></content:encoded>
         </item>
     </channel>

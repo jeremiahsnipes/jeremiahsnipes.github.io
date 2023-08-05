@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Starting and Stopping Services - CyberMITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CyberMITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Starting and Stopping Services</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690522246356"
+                  >2023-07-27 22:30</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690523265213"
+                  >2023-07-27 22:47</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="starting-and-stopping-services">Starting and Stopping Services</h1>
+<p><code>sudo service apache2 start</code>:</p>
+<p>Explanation: Starts the Apache web server service.<br />
+Example: Running <code>sudo service apache2 start</code> would initiate the Apache web server and make it available for serving web pages.<br />
+<img src="/_resources/9cb27b43ea4c4b34af3f0ab5ca30f3fe.png" /><br />
+*<strong>needs to be on port 80</strong></p>
+<p><code>sudo service apache2 stop</code>:</p>
+<p>Explanation: Stops the Apache web server service.<br />
+Example: Running <code>sudo service apache2 stop</code> would halt the running Apache web server, shutting down any active web page serving.</p>
+<hr />
+<p><code>python3 -m http.server 80</code>:</p>
+<p>Explanation: Starts a simple HTTP server using Python on port 80.<br />
+Example: Running <code>python3 -m http.server 80</code> would start a basic HTTP server on port 80, allowing you to serve files from the current directory.<br />
+<img src="/_resources/1d0fa2cfa4a945b9b73e31104099ce08.png" /><br />
+<img src="/_resources/c86aa7073a964038900f908d568e1dcd.png" /></p>
+<hr />
+<p><code>sudo systemctl enable ssh</code>:</p>
+<p>Explanation: Enables the SSH (Secure Shell) service to start automatically on system boot.<br />
+Example: Running <code>sudo systemctl enable ssh</code> would configure the system to start the SSH service during system startup.</p>
+<p><code>sudo systemctl disable ssh</code>:</p>
+<p>Explanation: Disables the SSH service from starting automatically on system boot.<br />
+Example: Running <code>sudo systemctl disable ssh</code> would prevent the SSH service from starting automatically during system startup.</p>
+<hr />
+<p>These commands are frequently used in Linux systems for managing services, starting and stopping processes, and enabling or disabling specific services at system startup. The <code>sudo</code> command is used to execute commands with superuser privileges. The <code>service</code> and <code>systemctl</code> commands are used to manage system services.</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>

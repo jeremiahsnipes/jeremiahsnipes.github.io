@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Navigating the File System - Kali Linux - CyberMITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CyberMITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Navigating the File System - Kali Linux</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690481394931"
+                  >2023-07-27 11:09</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690483768036"
+                  >2023-07-27 11:49</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="navigating-the-file-system-kali-linux">Navigating the File System - Kali Linux</h1>
+<p><a title="https://explainshell.com/" href="https://explainshell.com/">https://explainshell.com/</a><br />
+<img src="/_resources/052b98a8145a4e359c6bd6edd34ad32f.png" /></p>
+<hr />
+<p><code>pwd</code> (Print Working Directory):</p>
+<p>Explanation: Displays the current working directory.<br />
+Example: Running pwd in the terminal would show the absolute path of the current directory, such as "/home/user/documents".</p>
+<p><code>cd</code> (Change Directory):</p>
+<p>Explanation: Allows you to change the current working directory.<br />
+Example: Running cd /home/user/documents would change the directory to "/home/user/documents".</p>
+<p><code>cd ..</code> (Change to Parent Directory):</p>
+<p>Explanation: Moves up one level in the directory hierarchy.<br />
+Example: Running cd .. in "/home/user/documents" would move to the "/home/user" directory.</p>
+<p><code>ls</code> (List Directory Contents):</p>
+<p>Explanation: Lists the files and directories in the current directory.<br />
+Example: Running ls would display the files and directories in the current directory.</p>
+<p><code>ls -la</code> (List Detailed Directory Contents):</p>
+<p>Explanation: Lists detailed information about files and directories, including hidden files.<br />
+Example: Running ls -la would display a detailed list of files and directories, including hidden files, in the current directory.</p>
+<p><code>mkdir</code> (Make Directory):</p>
+<p>Explanation: Creates a new directory.<br />
+Example: Running mkdir new_folder would create a new directory named "new_folder" in the current directory.</p>
+<p><code>rmdir</code> (Remove Directory):</p>
+<p>Explanation: Removes an empty directory.<br />
+Example: Running rmdir empty_folder would remove the directory named "empty_folder" if it is empty.</p>
+<p><code>man</code> (Manual):</p>
+<p>Explanation: Displays the manual pages for a specified command.<br />
+Example: Running man ls would show the manual pages with detailed information about the ls command.</p>
+<hr />
+<p><code>echo</code></p>
+<p>Explanation: Displays text or variables as output.<br />
+Example: Running echo "Hello, world!" would output "Hello, world!" in the terminal.</p>
+<p><code>&gt;</code> (Output Redirection):</p>
+<p>Explanation: Redirects the output of a command to a file and overwrites the file if it already exists.<br />
+Example: Running echo "Hello" &gt; greeting.txt would write the text "Hello" to a file named "greeting.txt" or overwrite the file if it exists.<br />
+<img src="/_resources/c1f547d82a3c461791311caad5879819.png" /></p>
+<p><code>&gt;&gt;</code> (Append Output):</p>
+<p>Explanation: Redirects the output of a command and appends it to a file.<br />
+Example: Running echo "World!" &gt;&gt; greeting.txt would append the text "World!" to the end of the "greeting.txt" file.</p>
+<p><code>rm</code> (Remove):</p>
+<p>Explanation: Deletes files or directories.<br />
+Example: Running rm file.txt would delete the file named "file.txt" from the current directory.</p>
+<p><code>mv</code> (Move):</p>
+<p>Explanation: Moves or renames files and directories.<br />
+Example: Running mv file.txt new_directory/file_renamed.txt would move the file "file.txt" to the "new_directory" and rename it as "file_renamed.txt".</p>
+<p><code>cp</code> (Copy):</p>
+<p>Explanation: Copies files and directories.<br />
+Example: Running cp file.txt backup/file_copy.txt would create a copy of "file.txt" named "file_copy.txt" in the "backup" directory.</p>
+<p><code>locate</code>:</p>
+<p>Explanation: Searches for files and directories in a prebuilt database.<br />
+Example: Running locate myfile.txt would search for the file named "myfile.txt" in the prebuilt database and display its path if found.</p>
+<p><code>updatedb</code>:</p>
+<p>Explanation: Updates the database used by the locate command to reflect recent changes in the file system.<br />
+Example: Running updatedb would update the database, allowing the locate command to provide up-to-date search results.<br />
+<img src="/_resources/d55c1de7aef548bea79094ac7ab3f703.png" /></p>
+<p><code>passwd</code>:</p>
+<p>Explanation: Allows a user to change their password.<br />
+Example: Running passwd would prompt the user to enter their current password and then set a new password.</p>
+<p>Remember to exercise caution when using commands like rm as they can permanently delete files. It's always a good practice to double-check before executing such commands.</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
