@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Filter TCP Handshakes. - CYBER MITM</title>
+  <link rel="stylesheet" href="/_markdown_plugin_assets/highlight.js/atom-one-light.css" /></head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CYBER MITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Filter TCP Handshakes.</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690415036245"
+                  >2023-07-26 16:43</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690415162406"
+                  >2023-07-26 16:46</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p><strong>How to filter wireshark to show only TCP threeway handshakes</strong></p>
+<p>ChatGPTChatGPT</p>
+<p>To filter Wireshark to display only TCP three-way handshakes, you can use a display filter. A TCP three-way handshake is the process of establishing a connection between a client and a server, and it consists of three packets: SYN, SYN-ACK, and ACK. Here's how you can apply the filter in Wireshark:</p>
+<ol>
+<li>
+<p>Open Wireshark and start capturing network traffic.</p>
+</li>
+<li>
+<p>In the filter bar, enter the following display filter:</p>
+</li>
+</ol>
+<div><pre class="hljs"><code>
+
+`tcp<span class="hljs-selector-class">.flags</span><span class="hljs-selector-class">.syn</span> == <span class="hljs-number">1</span> &amp;&amp; tcp<span class="hljs-selector-class">.flags</span><span class="hljs-selector-class">.ack</span> == <span class="hljs-number">0</span>` 
+
+
+
+</code></pre></div>
+<p>This filter checks for TCP packets with the SYN flag set to 1 (indicating a request to synchronize sequence numbers) and the ACK flag set to 0 (indicating that it's not an acknowledgment).</p>
+<ol start="3">
+<li>Press Enter or click the Apply button to apply the filter.</li>
+</ol>
+<p>Now, Wireshark will only display packets that match the TCP three-way handshake criteria. You should see packets with SYN but without ACK, which represents the first step of the three-way handshake. The other steps (SYN-ACK and ACK) will likely follow shortly after in the captured packets.</p>
+<p>Keep in mind that applying this filter may result in a reduced number of displayed packets, as only those involved in the TCP three-way handshake will be shown. If you want to see the entire communication between the client and server, you can remove the filter or modify it accordingly.</p>
+<img width="30" height="30" src="/_resources/768dd00ebfea4e228d9dc7efb6eae63e.htm" class="jop-noMdConv" />
+<p>okay i did that, is it the highlighted lines now?</p>
+<p>ChatGPTChatGPT</p>
+<p>Yes, if you applied the display filter as described and you see highlighted lines, then those highlighted lines represent the packets that match the filter criteria. In this case, the highlighted lines should correspond to the TCP packets involved in the three-way handshake.</p>
+<p>Typically, Wireshark highlights the packets that match the filter to make it easier to identify them among all the captured packets. The highlighted lines will help you quickly locate the SYN packets (first step of the handshake) and track the subsequent SYN-ACK and ACK packets that complete the three-way handshake.</p>
+<p>You should see three highlighted packets for each TCP connection: one for the SYN, one for the SYN-ACK, and one for the ACK. If you select a packet, you can inspect its details in the middle panel to see the TCP flags and other relevant information.</p>
+<img width="30" height="30" src="/_resources/768dd00ebfea4e228d9dc7efb6eae63e.htm" class="jop-noMdConv" />
+<p>break this down for me: 216 0.841389259 172.16.12.129 192.229.211.108 TCP 74 44402 → 80 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=2951891734 TSecr=0 WS=128</p>
+<p>ChatGPTChatGPT</p>
+<p>Sure! Let's break down the packet information you provided:</p>
+<ol>
+<li>
+<p><strong>216:</strong> This is the packet number, indicating its position in the capture sequence.</p>
+</li>
+<li>
+<p><strong>0.841389259:</strong> This is the time at which the packet was captured, measured in seconds since the start of the capture.</p>
+</li>
+<li>
+<p><strong>172.16.12.129:</strong> This is the source IP address. It's the IP address of the sender (probably the client).</p>
+</li>
+<li>
+<p><strong>192.229.211.108:</strong> This is the destination IP address. It's the IP address of the receiver (probably the server).</p>
+</li>
+<li>
+<p><strong>TCP:</strong> This indicates the transport layer protocol used, which is Transmission Control Protocol.</p>
+</li>
+<li>
+<p><strong>74:</strong> This is the total length of the packet in bytes (header + data).</p>
+</li>
+<li>
+<p><strong>44402 → 80:</strong> These are the source and destination port numbers, respectively. The client is using port 44402 to communicate with the server's port 80, which is the standard port for HTTP.</p>
+</li>
+<li>
+<p><strong>[SYN]:</strong> This is a TCP flag. The <code>[SYN]</code> flag indicates that this packet is part of the TCP three-way handshake and is a "Synchronize" packet. It's the first step in establishing a TCP connection.</p>
+</li>
+<li>
+<p><strong>Seq=0:</strong> This shows the sequence number of the packet. In the SYN packet, the sequence number is typically set to 0.</p>
+</li>
+<li>
+<p><strong>Win=64240:</strong> This is the advertised window size, indicating the number of bytes the receiver is willing to accept. It's a flow control mechanism.</p>
+</li>
+<li>
+<p><strong>Len=0:</strong> This shows the length of the TCP payload in bytes. In this case, the payload is empty since it's just a SYN packet.</p>
+</li>
+<li>
+<p><strong>MSS=1460:</strong> This stands for Maximum Segment Size. It indicates the largest amount of data (in bytes) that can be sent in a single TCP segment.</p>
+</li>
+<li>
+<p><strong>SACK_PERM:</strong> This stands for Selective Acknowledgment Permitted. It's an option that allows the receiver to selectively acknowledge data.</p>
+</li>
+<li>
+<p><strong>TSval=2951891734:</strong> This is the timestamp value. TCP timestamps are used for various purposes, including performance optimization.</p>
+</li>
+<li>
+<p><strong>TSecr=0:</strong> This is the timestamp echo reply value. It's used in conjunction with TCP timestamps.</p>
+</li>
+<li>
+<p><strong>WS=128:</strong> This stands for Window Scaling. It allows the window size to be scaled beyond its normal 16-bit limit.</p>
+</li>
+</ol>
+<p>This packet represents the initial step of the TCP three-way handshake (SYN packet) where the client is trying to establish a connection with the server. The server should respond with a SYN-ACK packet, and then the client will send an ACK packet to complete the three-way handshake and establish the TCP connection.</p>
+<img width="30" height="30" src="/_resources/768dd00ebfea4e228d9dc7efb6eae63e.htm" class="jop-noMdConv" />
+<p>so this, is like the first "handshake"?</p>
+<p>ChatGPTChatGPT</p>
+<p>Yes, exactly! The packet you provided represents the first step of the TCP three-way handshake, commonly known as the "SYN" (Synchronize) packet. During the three-way handshake, the client initiates the process of establishing a TCP connection with the server.</p>
+<p>The three steps of the TCP three-way handshake are as follows:</p>
+<ol>
+<li>
+<p><strong>Step 1 (SYN):</strong> The client sends a SYN packet to the server. This packet contains the SYN flag set to 1 and an initial sequence number (Seq=0). It also includes other TCP options and information about the client's capabilities, such as the Maximum Segment Size (MSS), Window Scaling (WS), and TCP timestamps.</p>
+</li>
+<li>
+<p><strong>Step 2 (SYN-ACK):</strong> Upon receiving the SYN packet, the server responds with a SYN-ACK packet. This packet has the SYN and ACK flags set (SYN=1, ACK=1). The acknowledgment number (ACK) is set to one more than the sequence number received in the SYN packet, and the server also chooses its initial sequence number. Like the SYN packet, the SYN-ACK packet includes TCP options.</p>
+</li>
+<li>
+<p><strong>Step 3 (ACK):</strong> Finally, the client acknowledges the SYN-ACK packet by sending an ACK packet to the server. The ACK flag is set (ACK=1), and the acknowledgment number (ACK) is set to one more than the sequence number received in the SYN-ACK packet. At this point, the connection is established, and data can start flowing between the client and the server.</p>
+</li>
+</ol>
+<p>So, the packet you provided with the <code>[SYN]</code> flag and sequence number 0 is indeed the first "handshake" where the client is initiating the connection setup process with the server.</p>
+<img width="30" height="30" src="/_resources/768dd00ebfea4e228d9dc7efb6eae63e.htm" class="jop-noMdConv" />
+<p>so the second handshake should have a SYN-ACK where?</p>
+<p>ChatGPTChatGPT</p>
+<p>Yes, that's correct! The second step of the TCP three-way handshake involves the server's response to the client's SYN packet. This response from the server is the SYN-ACK packet. Let me explain it in more detail:</p>
+<ol>
+<li>
+<p><strong>Step 1 (Client):</strong> The client sends a SYN packet to the server, trying to initiate a connection. This packet has the SYN flag set to 1, indicating the client's intention to synchronize sequence numbers.</p>
+</li>
+<li>
+<p><strong>Step 2 (Server):</strong> Upon receiving the SYN packet from the client, the server responds with a SYN-ACK packet. This packet has both the SYN and ACK flags set (SYN=1, ACK=1). The ACK flag acknowledges the receipt of the client's SYN packet, and the SYN flag indicates the server's intention to synchronize sequence numbers as well. The server also selects an initial sequence number and includes additional TCP options if necessary.</p>
+</li>
+<li>
+<p><strong>Step 3 (Client):</strong> After receiving the SYN-ACK packet from the server, the client sends an ACK packet. This packet has the ACK flag set to 1 and acknowledges the receipt of the server's SYN-ACK packet. The ACK packet also confirms the server's initial sequence number.</p>
+</li>
+</ol>
+<p>At this point, the TCP three-way handshake is complete, and the connection is established between the client and the server. Both the client and server have exchanged their initial sequence numbers, and they are ready to send and receive data.</p>
+<p>So, in summary, the second handshake (Step 2) is represented by the SYN-ACK packet sent by the server in response to the client's SYN packet. The three-way handshake ensures that both ends of the connection agree on initial sequence numbers and establishes a reliable connection before data transmission begins.</p>
+<img width="30" height="30" src="/_resources/768dd00ebfea4e228d9dc7efb6eae63e.htm" class="jop-noMdConv" />
+<p>what is the wireshark filter for finding the SYN-ACK?</p>
+<p>ChatGPTChatGPT</p>
+<p>To filter Wireshark to display only the SYN-ACK packets, you can use the following display filter:</p>
+<div><pre class="hljs"><code>
+
+`tcp<span class="hljs-selector-class">.flags</span><span class="hljs-selector-class">.syn</span> == <span class="hljs-number">1</span> &amp;&amp; tcp<span class="hljs-selector-class">.flags</span><span class="hljs-selector-class">.ack</span> == <span class="hljs-number">1</span>` 
+
+
+
+</code></pre></div>
+<p>This filter checks for TCP packets with both the SYN and ACK flags set to 1, which indicates SYN-ACK packets. SYN-ACK packets are sent by the server in response to the client's SYN packet during the TCP three-way handshake.</p>
+<p>Here's how to apply the filter in Wireshark:</p>
+<ol>
+<li>
+<p>Open Wireshark and start capturing network traffic.</p>
+</li>
+<li>
+<p>In the filter bar, enter the filter mentioned above:</p>
+</li>
+</ol>
+<div><pre class="hljs"><code>
+
+`tcp<span class="hljs-selector-class">.flags</span><span class="hljs-selector-class">.syn</span> == <span class="hljs-number">1</span> &amp;&amp; tcp<span class="hljs-selector-class">.flags</span><span class="hljs-selector-class">.ack</span> == <span class="hljs-number">1</span>` 
+
+
+
+</code></pre></div>
+<ol start="3">
+<li>Press Enter or click the Apply button to apply the filter.</li>
+</ol>
+<p>After applying the filter, Wireshark will display only packets that match the criteria for SYN-ACK packets. These packets represent the server's response to the client's SYN packets during the TCP three-way handshake. You should see a list of packets with the <code>[SYN, ACK]</code> flag combination in the "Info" column, indicating the SYN-ACK packets.</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
