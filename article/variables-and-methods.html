@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Variables and Methods - CYBER MITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CYBER MITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Variables and Methods</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1690752146579"
+                  >2023-07-30 14:22</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1690752476927"
+                  >2023-07-30 14:27</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="variables-and-methods">Variables and Methods</h1>
+<p>In Python, variables and methods are fundamental concepts used in programming. Here's an explanation of each:</p>
+<hr />
+<p><strong>Variables:</strong></p>
+<p>A variable is a named storage location used to store data or values in a program. It acts as a placeholder for data that can be accessed, modified, or used in calculations throughout the program. Variables in Python are dynamically typed, meaning their data type can change during program execution. Here's an example of variable usage in Python:</p>
+<p><code>#Variable assignment</code><br />
+<code>x = 10</code><br />
+<code>name = "John"</code><br />
+<code>is_true = True</code></p>
+<p><code>#Variable usage</code><br />
+<code>y = x + 5</code><br />
+<code>print("Hello, " + name)</code><br />
+<code>if is_true:</code><br />
+<code>print("The condition is true")</code></p>
+<p>In the example above, x, name, and is_true are variables assigned with different data types (integer, string, and boolean, respectively). They are used in calculations and print statements to perform operations and display values.</p>
+<hr />
+<p><strong>Methods:</strong></p>
+<p>A method is a block of reusable code that performs a specific task or action. Methods are associated with objects or classes and are called upon to perform certain operations. In Python, methods are commonly referred to as functions. Built-in functions and user-defined functions both fall under the category of methods. Here's an example:</p>
+<p><code>#Built-in method example</code><br />
+<code>numbers = [1, 2, 3, 4, 5]</code><br />
+<code>length = len(numbers)</code><br />
+<code>print("Length:", length)</code></p>
+<p><code>#User-defined method example</code><br />
+<code>def greet(name):</code><br />
+<code>print("Hello, " + name)</code></p>
+<p><code>greet("Alice")</code></p>
+<hr />
+<ul>
+<li>
+<p>In the example above, <code>len()</code> is a built-in method that calculates the length of a list (<code>numbers</code> in this case). The user-defined method <code>greet()</code> takes a parameter name and prints a greeting message. It is called with the argument "Alice" to print "Hello, Alice" to the console.</p>
+</li>
+<li>
+<p>Methods can have return values, perform actions, accept parameters, and more, depending on their purpose and design.</p>
+</li>
+<li>
+<p>Variables and methods are essential components in Python programming. Variables store data, while methods encapsulate reusable blocks of code for specific tasks. Understanding their usage and relationship is crucial for building functional and efficient programs.</p>
+</li>
+</ul>
+<hr />
+<p><strong>PYTHON</strong></p>
+<p>#Variables and Methods<br />
+quote = "All is fair in love and war."<br />
+print(quote)</p>
+<p>print(quote.upper()) #uppercase<br />
+print(quote.lower()) #lowercase<br />
+print(quote.title()) #title case<br />
+print(len(quote)) #counts characters</p>
+<p>name = "Heath" #string<br />
+age = 33 #int<br />
+gpa = 3.7 #float - has a decimal</p>
+<p>print(int(age))<br />
+print(int(30.1))<br />
+print(int(30.9)) - Will it round? No!</p>
+<p>print("My name is " + name + " and I am " + str(age) + " years old.")</p>
+<p>age +=1<br />
+print(age)</p>
+<p>birthday = 1<br />
+age += birthday<br />
+print(age)</p>
+<hr />
+<p><strong>Output</strong><br />
+All is fair in love and war.<br />
+ALL IS FAIR IN LOVE AND WAR.<br />
+all is fair in love and war.<br />
+All Is Fair In Love And War.<br />
+31<br />
+33<br />
+30<br />
+My name is Heath and I am 33 years old.<br />
+34<br />
+35</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>

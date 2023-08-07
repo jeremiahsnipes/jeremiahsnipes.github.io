@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Conditional Statements - CYBER MITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CYBER MITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Conditional Statements</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1691384250674"
+                  >2023-08-06 21:57</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1691384705972"
+                  >2023-08-06 22:05</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="conditional-statements">Conditional Statements</h1>
+<p>In Python, conditional statements are used to perform different actions based on certain conditions. They allow you to control the flow of your program by executing specific blocks of code when certain conditions are met. Here's an explanation of conditional statements in Python:</p>
+<p><strong>if Statement:</strong><br />
+The <code>if</code> statement is the most basic conditional statement. It executes a block of code if a given condition is true. Here's the general syntax:</p>
+<p><code>if condition:</code><br />
+<code># code to be executed if the condition is true</code></p>
+<p><strong>Example:</strong></p>
+<p><code>x = 5</code><br />
+<code>if x &gt; 0:</code><br />
+<code>print("x is positive")</code></p>
+<p>In this example, the code inside the if block (print("x is positive")) will be executed if the condition x &gt; 0 is true.</p>
+<hr />
+<p><strong>if-else Statement:</strong></p>
+<p>The <code>if-else</code> statement allows you to specify two different blocks of code—one to be executed if the condition is true and another to be executed if the condition is false. Here's the syntax:</p>
+<p><code>if condition:</code><br />
+<code># code to be executed if the condition is true</code><br />
+<code>else:</code><br />
+<code># code to be executed if the condition is false</code></p>
+<p><strong>Example:</strong></p>
+<p><code>x = 5</code><br />
+<code>if x &gt; 0:</code><br />
+<code> print("x is positive")</code><br />
+<code>else:</code><br />
+<code>print("x is not positive")</code></p>
+<p>In this example, if x is greater than 0, the first block (print("x is positive")) will be executed. Otherwise, the second block (print("x is not positive")) will be executed.</p>
+<hr />
+<p><strong>if-elif-else Statement:</strong></p>
+<p>The <code>if-elif-else</code> statement allows you to check multiple conditions and execute different blocks of code based on those conditions. It provides more than two options for branching. Here's the syntax:</p>
+<p><code>if condition1:</code><br />
+<code># code to be executed if condition1 is true</code><br />
+<code>elif condition2:</code><br />
+<code># code to be executed if condition1 is false and condition2 is true</code><br />
+<code>else:</code><br />
+<code># code to be executed if all conditions are false</code></p>
+<p><strong>Example:</strong></p>
+<p><code>x = 5</code><br />
+<code>if x &gt; 0:</code><br />
+<code>print("x is positive")</code><br />
+<code>elif x &lt; 0:</code><br />
+<code>print("x is negative")</code><br />
+<code>else:</code><br />
+<code>print("x is zero")</code></p>
+<p>In this example, if x is greater than 0, the first block will be executed. If it is less than 0, the second block will be executed. Otherwise, if none of the conditions are true, the third block will be executed.</p>
+<hr />
+<p>Conditional statements allow you to make decisions and control the execution flow of your program based on certain conditions. They are essential for implementing logic and branching in your code.</p>
+<hr />
+<p>PYTHON<br />
+#Conditional Statements<br />
+def drink(money):<br />
+if money &gt;= 2:<br />
+return "You've got yourself a drink!"<br />
+else:<br />
+return "No drink for you!"</p>
+<p>print(drink(3))<br />
+print(drink(1))</p>
+<p>def alcohol(age,money):<br />
+if(age &gt;= 21) and (money &gt;= 5):<br />
+return "We're getting a drink!"<br />
+elif (age &gt;= 21) and (money &lt; 5):<br />
+return "Come back with more money."<br />
+elif (age &lt; 21) and (money &gt;= 5):<br />
+return "Nice try, kid!"<br />
+else:<br />
+return "You're too poor and too young!"</p>
+<p>print(alcohol(21,5))<br />
+print(alcohol(21,4))<br />
+print(alcohol(20,5))<br />
+print(alcohol(20,4))</p>
+<hr />
+<p><img src="/_resources/b81c737e3be7466fa7ce80a5de8637fc.png" /></p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
