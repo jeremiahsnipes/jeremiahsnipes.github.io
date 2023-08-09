@@ -8,7 +8,7 @@ Welcome to the CYBER MITM repository! This repository contains various scripts, 
 
 ## Contents
 
-- [Web Scraping Script](./web_scraping_script/): A script for web scraping.
+- [Web Scraping Script](https://jeremiahsnipes.github.io/article/web-scraping-script): A script for web scraping.
 - [To-Do List Script](./todo_list_script/): A script for managing a to-do list.
 - [Calculator Script](./calculator_script/): A script for basic calculations.
 - [File Management and Manipulation](./file_management/): Examples of working with files.
