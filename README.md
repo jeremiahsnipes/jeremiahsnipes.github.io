@@ -45,7 +45,7 @@ Contributions are welcome! If you'd like to contribute to this repository, pleas
 
 ## License
 
-This repository is licensed under the [MIT License](https://github.com/jeremiahsnipes/jeremiahsnipes.github.io/blob/main/MIT_license.txt).
+This repository is licensed under the [MIT License](https://github.com/jeremiahsnipes/jeremiahsnipes.github.io/blob/main/MIT_license.txt)
 
 
 ---
