@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Advanced Strings - CYBER MITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CYBER MITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Advanced Strings</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1691548929010"
+                  >2023-08-08 19:42</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1691549336019"
+                  >2023-08-08 19:48</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="advanced-strings">Advanced Strings</h1>
+<p>In Python, the <code>str</code> (string) data type represents a sequence of characters enclosed within single quotes (' ') or double quotes (" "). Strings in Python are immutable, which means they cannot be changed after they are created. Here are some key points about strings in Python:</p>
+<p><strong>Creation:</strong></p>
+<p>Example: <code>my_string = 'Hello, World!' or my_string = "Hello, World!"</code></p>
+<hr />
+<p><strong>Accessing Characters:</strong></p>
+<ul>
+<li>You can access individual characters within a string using indexing, starting from 0.</li>
+<li>Example: <code>print(my_string[0])</code> would output 'H'.</li>
+</ul>
+<hr />
+<p><strong>String Concatenation:</strong></p>
+<ul>
+<li>You can concatenate (join) two or more strings using the + operator.</li>
+<li>Example: <code>greeting = 'Hello' + ' ' + 'World!'</code> would result in 'Hello World!'</li>
+</ul>
+<hr />
+<p><strong>String Length:</strong></p>
+<ul>
+<li>The len() function can be used to determine the length (number of characters) of a string.</li>
+<li>Example: <code>print(len(my_string))</code> would output the length of the string.</li>
+</ul>
+<hr />
+<p><strong>String Slicing:</strong></p>
+<ul>
+<li>You can extract a substring from a string using slicing, specifying the start and end indices.</li>
+<li>Example: <code>substring = my_string[7:12]</code> would extract the substring 'World'.</li>
+</ul>
+<hr />
+<p><strong>String Methods:</strong></p>
+<ul>
+<li>
+<p>Python provides various built-in methods to manipulate and transform strings.</p>
+</li>
+<li>
+<p>Examples include <code>upper(), lower(), strip(), split(), replace()</code>, and more. Example: <code>print(my_string.upper())</code> would output 'HELLO, WORLD!'.</p>
+</li>
+</ul>
+<hr />
+<p><strong>String Formatting:</strong></p>
+<p>String formatting allows you to embed values within a string. This can be done using the <code>%</code> operator or the <code>format()</code> method.<br />
+<strong>Example:</strong></p>
+<p><code>name = 'Alice'</code><br />
+<code>age = 30</code><br />
+<code>print("My name is %s and I'm %d years old." % (name, age))</code><br />
+<code>#Output: My name is Alice and I'm 30 years old.</code></p>
+<hr />
+<p>These are just a few key concepts related to strings in Python. Strings in Python are versatile and support a wide range of operations and manipulations.</p>
+<hr />
+<p>#ADVANCED STRINGS</p>
+<p>my_name = "Bob"<br />
+print(my_name[0]) #first letter<br />
+print(my_name[-1]) #last letter</p>
+<p>sentence = "This is a sentence."<br />
+print(sentence[:4])</p>
+<p>print(sentence.split()) #delimeter - default is a space</p>
+<p>sentence_split = sentence.split()<br />
+sentence_join = ' '.join(sentence_split)<br />
+print(sentence_join)</p>
+<p>quote = "He said, 'give me all your money'" - show example<br />
+quote = "He said, "give me all your money""<br />
+print(quote)</p>
+<p>too_much_space = "                       hello          "<br />
+print(too_much_space.strip())</p>
+<p>print("A" in "Apple") #returns true<br />
+print("a" in "Apple") #returns false - case sensitive</p>
+<p>letter = "A"<br />
+word = "Apple"<br />
+print(letter.lower() in word.lower()) #improved</p>
+<p>movie = "The Hangover"<br />
+print("My favorite movie is {}.".format(movie))<br />
+print("My favorite movie is %s" % movie)<br />
+print(f"My favorite movie is {movie}")</p>
+<hr />
+<p><img src="/_resources/9efbc8318d8849af8aa9a7f18acb9d22.png" /></p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
