@@ -30,7 +30,7 @@ Welcome to the CYBER MITM repository! This repository contains various scripts, 
 - [The-OSI-Model](https://jeremiahsnipes.github.io/article/the-osi-model): Information about the OSI model.
 - [Common-Ports-and-Protocols](https://jeremiahsnipes.github.io/article/common-ports-and-protocols): List of common ports and protocols.
 - [Filter-TCP-Handshakes](https://jeremiahsnipes.github.io/article/filter-tcp-handshakes.): Explanation of filtering TCP handshakes.
-- [TCP-UDP-and-the-Three-Way-Handshake](https://jeremiahsnipes.github.io/article/tcp-udp-and-the-three-way-handshakes.): Overview of TCP, UDP, and the three-way handshake.
+- [TCP-UDP-and-the-Three-Way-Handshake](https://jeremiahsnipes.github.io/article/tcp-udp-and-the-three-way-handshakes): Overview of TCP, UDP, and the three-way handshake.
 - [MAC-Addresses-Layer-2-Physical-Address](https://jeremiahsnipes.github.io/article/mac-addresses-layer-2-physical-address): Explanation of MAC addresses and layer 2 addressing.
 - [IP-Address-Layer-3-Routing](https://jeremiahsnipes.github.io/article/ip-address-layer-3-routing): Information about IP addresses and layer 3 routing.
 
