@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Tuples - CYBER MITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CYBER MITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Tuples</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1691547776810"
+                  >2023-08-08 19:22</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1691547960916"
+                  >2023-08-08 19:26</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="tuples">Tuples</h1>
+<p>In Python, a tuple is an ordered collection of elements, similar to a list. However, unlike lists, tuples are immutable, meaning their elements cannot be modified once they are created. Here's an explanation of tuples in Python:</p>
+<p><strong>Tuple Creation:</strong></p>
+<p>To create a tuple, you enclose comma-separated values within parentheses<code>( )</code>. Here's an example:</p>
+<p><code>fruits = ("apple", "banana", "orange")</code></p>
+<hr />
+<p><strong>Tuple Access:</strong></p>
+<p>You can access individual elements in a tuple using indexing, similar to lists. Indexing starts from 0 for the first element. Here are some examples:</p>
+<p><code>print(fruits[0])    # Output: "apple"</code><br />
+<code>print(fruits[2])    # Output: "orange"</code></p>
+<hr />
+<p><strong>Tuple Immutability:</strong></p>
+<p>Tuples are immutable, meaning you cannot modify their elements. Once a tuple is created, its values cannot be changed. For example, attempting to assign a new value to an element will result in an error. Here's an example:</p>
+<p><code>fruits[1] = "grape"    # This will raise an error</code></p>
+<hr />
+<p><strong>Tuple Operations:</strong></p>
+<p>Although tuples are immutable, you can perform certain operations on them:</p>
+<p>Concatenation: You can use the <code>+</code> operator to concatenate two or more tuples.<br />
+Length: The <code>len()</code> function returns the number of elements in a tuple.<br />
+Slicing: You can extract a subtuple from a tuple using slicing.</p>
+<p>Here are some examples:<br />
+<code>fruits = ("apple", "banana", "orange")</code><br />
+<code>fruits2 = ("grape", "kiwi")</code></p>
+<p><code>combined = fruits + fruits2</code><br />
+<code>print(combined)         # Output: ("apple", "banana", "orange", "grape", "kiwi")</code></p>
+<p><code>print(len(fruits))      # Output: 3</code></p>
+<p><code>subtuple = fruits[1:3]</code><br />
+<code>print(subtuple)         # Output: ("banana", "orange")</code></p>
+<hr />
+<p>Tuples are useful in situations where you want to store a collection of values that should not be changed. They can be used to group related data elements and can also be used as keys in dictionaries. While tuples are immutable, they offer advantages such as faster performance and protection against unintentional modification.</p>
+<hr />
+<p>#Tuples - Do not change, ()<br />
+grades = ("a", "b", "c", "d", "f")</p>
+<p>grades.pop, grades.append won't work - not mutable</p>
+<p>print(grades[1])</p>
+<hr />
+<p><img src="/_resources/fae702160dfc496d979be2c88275a76b.png" /></p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
