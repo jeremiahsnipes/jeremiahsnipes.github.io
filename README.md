@@ -2,7 +2,7 @@
 Blog Website By Joplin Pages Publisher
 # CYBER MITM Repository
 
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/your-repo-name)
+![GitHub last commit](https://img.shields.io/github/last-commit/jeremiahsnipes/jeremiahsnipes.github.io)
 
 Welcome to the CYBER MITM repository! This repository contains various scripts, notes, and resources related to cybersecurity, networking, scripting, and more.
 
