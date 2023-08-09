@@ -2,7 +2,7 @@
 Blog Website By Joplin Pages Publisher
 # CYBER MITM Repository
 
-https://img.shields.io/github/last-commit/jeremiahsnipes/jeremiahsnipes.github.io
+![GitHub last commit](https://img.shields.io/github/last-commit/your-username/your-repo-name)
 
 Welcome to the CYBER MITM repository! This repository contains various scripts, notes, and resources related to cybersecurity, networking, scripting, and more.
 
@@ -48,4 +48,4 @@ This repository is licensed under the [MIT License](./LICENSE).
 
 ---
 
-*Note: This README is just a template. Please update the sections, links, and descriptions according to the actual content of your repository.*
+
