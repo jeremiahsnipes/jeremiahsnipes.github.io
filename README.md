@@ -11,7 +11,7 @@ Welcome to the CYBER MITM repository! This repository contains various scripts, 
 - [Web Scraping Script](https://jeremiahsnipes.github.io/article/web-scraping-script): A script for web scraping.
 - [To-Do List Script](https://jeremiahsnipes.github.io/article/to-do-list-script): A script for managing a to-do list.
 - [Calculator Script](https://jeremiahsnipes.github.io/article/calculator-script): A script for basic calculations.
-- [File Management and Manipulation](https://jeremiahsnipes.github.io/article/file-management): Examples of working with files.
+- [File Management and Manipulation](https://jeremiahsnipes.github.io/article/file-management-and-manipulation): Examples of working with files.
 - [Conditional Statements](https://jeremiahsnipes.github.io/article/conditional-statements): Examples of using conditional statements.
 - [Boolean Expressions and Relational Operators](https://jeremiahsnipes.github.io/article/boolean-expressions): Examples of working with boolean expressions.
 - [Functions](https://jeremiahsnipes.github.io/article/functions): Examples of defining and using functions.
