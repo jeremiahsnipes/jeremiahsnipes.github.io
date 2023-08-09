@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>To-Do List Script - CYBER MITM</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">CYBER MITM</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">To-Do List Script</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1691541484623"
+                  >2023-08-08 17:38</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1691541498667"
+                  >2023-08-08 17:38</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><h1 id="to-do-list-script">To-Do List Script</h1>
+<p>tasks = []</p>
+<p>def add_task(task):<br />
+tasks.append(task)<br />
+print("Task added:", task)</p>
+<p>def list_tasks():<br />
+print("Tasks:")<br />
+for i, task in enumerate(tasks, start=1):<br />
+print(f"{i}. {task}")</p>
+<p>if <strong>name</strong> == "<strong>main</strong>":<br />
+while True:<br />
+print("1. Add Task")<br />
+print("2. List Tasks")<br />
+print("3. Exit")</p>
+<pre><code>    choice = input("Select an option: ")
+    
+    if choice == "1":
+        new_task = input("Enter task: ")
+        add_task(new_task)
+    elif choice == "2":
+        list_tasks()
+    elif choice == "3":
+        break
+    else:
+        print("Invalid choice")
+</code></pre>
+<hr />
+</div>
+      </article>
+    </div>
+  </body>
+</html>
